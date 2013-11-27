@@ -105,7 +105,7 @@
     }
     
     __persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-    
+    //AFIncrementalStore
     AFIncrementalStore *incrementalStore = (AFIncrementalStore *)[__persistentStoreCoordinator addPersistentStoreWithType:[AppDotNetIncrementalStore type] configuration:nil URL:nil options:nil error:nil];
     
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"AppDotNet.sqlite"];

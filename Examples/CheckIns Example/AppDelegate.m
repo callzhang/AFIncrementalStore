@@ -26,6 +26,8 @@
 
 #import "CheckInsIncrementalStore.h"
 
+#import <Parse/Parse.h>
+
 @implementation AppDelegate
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
@@ -35,6 +37,10 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    //parse
+    [Parse setApplicationId:@"aISrB65XT4oj46hvQywSx4YnYtf9DZZLEojLsAaX"
+                  clientKey:@"SpEldL5yLzysNZoZAQJkZZS3dwJSolzYzemKuzZ5"];
  
     CheckInsViewController *viewController = [[CheckInsViewController alloc] init];
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
